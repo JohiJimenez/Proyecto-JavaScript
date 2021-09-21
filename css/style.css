@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", serif;
+  font-size: size;
+  list-style: none;
+}
+
+/*Estilo Body*/
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  color: #292929;
+}
+
+/*Estilo del Header*/
+.encabezado__titulo {
+  margin: 1rem;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-size: italic;
+}
+
+/*Estilos del Menu de Navegacion*/
+.encabezado__menu {
+  background-color: #CE97B0;
+  margin: 0.4rem;
+  padding: 0.5rem;
+}
+.encabezado__menu ul li a {
+  color: #292929;
+  font-size: 1.2rem;
+}
+.encabezado__menu ul li a:hover {
+  background-color: #f8bfe7;
+  color: #49313b;
+  border-radius: 1.2rem;
+}
+
+i {
+  font-size: 2rem;
+  margin: 0.5rem;
+}
+
+/*Estilo Cuerpo Principal*/
+main {
+  padding: 0 1.1rem;
+}
+
+/*Estilo de Productos*/
+.container .row {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.container .row .producto__img {
+  width: auto;
+  margin: 10px;
+  padding: 1rem;
+  border-color: blueviolet;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+}
+.container .row .producto__img:hover {
+  transform: scale(1.1);
+}
+.container .row .producto__icon {
+  color: #ca63af;
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  size: 3rem;
+}
+.container .row h3.producto__titulo {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.container .row .producto__precio {
+  display: block;
+  text-align: center;
+  color: #2f21ad;
+}
+
+/*Estilos Pie de Pagina*/
+.footer {
+  background-color: #CE97B0;
+  text-align: center;
+  color: #292929;
+  margin: 0.5rem;
+  padding: 0.5 rem;
+}
+.footer .footer__iconos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.direccion {
+  margin: 1.5rem;
+}
+.direccion p {
+  font-size: 1rem;
+}
+
+.copyright {
+  align-content: center;
+}
+.copyright p {
+  font-size: 0.4 rem;
+}
+
+.fab:hover {
+  transform: scale(1.5);
+}
+
+/*Estilo Marcas*/
+.slide {
+  margin-top: 1rem;
+  width: inherit;
+  height: inherit;
+}
+.slide img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/*Estilo Nuevos*/
+.contenedorNuevos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+.contenedorNuevos .card {
+  margin: 1rem;
+}
+.contenedorNuevos .card .card-title {
+  text-align: center;
+}
+.contenedorNuevos .card .card-text {
+  margin: 1.2rem;
+  padding: 1rem;
+  text-align: justify;
+}
+.contenedorNuevos .card .btn-primary {
+  display: block;
+  border: 2px solid #FF4E00;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  margin: 20px auto;
+  background-color: #f5addf;
+  font-size: 1rem;
+  border-radius: #53193d;
+  color: brown;
+  border: transparent;
+}
+.contenedorNuevos .card .btn-primary:hover {
+  background-color: #f797da;
+  color: blue;
+}
+
+/*Estilo preguntas*/
+#contenedor__preguntas {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.preguntas {
+  margin: 20px;
+  display: flex;
+  line-height: 1.5;
+  flex-direction: column;
+}
+
+.titulo {
+  color: #361236;
+  font-size: 1.5rem;
+}
+.titulo ol li {
+  text-align: justify;
+  list-style: none;
+}
+
+/*Estilo Formulario*/
+.formulario {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-color: #6f0fc9;
+}
+.formulario form {
+  position: relative;
+  width: 740px;
+  height: 498px;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=style.css.map */
