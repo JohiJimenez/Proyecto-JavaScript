@@ -1,75 +1,32 @@
+//Array de el Carrito de Compras
 
-//Array con los Productos de la Tienda
+let carrito = [];
+const contenedorDeProductos= document.getElementById('container');
 
-const productos = [{ id: 1, nombre: 'Acido Ascorbico', precio: 5000 },
-{ id: 2, nombre: 'Acido Glicolico', precio: 4500 },
-{ id: 3, nombre: 'Polvo de Niacinamida', precio: 6000 }];
+mostrandoProductos(productos);
 
-//Clase para agregar un producto nuevo a la tienda
+function mostrandoProductos (array){
 
-class Producto {
-    constructor(producto) {
-        this.id = producto.id;
-        this.nombre = producto.nombre;
-        this.precio = producto.precio;
+    for ( const productos of array) {
+        let div = document.createElement('div');
+        div.classList.add('row');
+        div.innerHTML+= `<div class="producto col">
+                                <img src=${productos.img} class="producto__img">
+                                <h3 class="producto__titulo">${productos.nombre}</h3>
+                                <span class="producto__precio">${productos.precio}</span>
+                                <div>
+                                    <input class="btn btn-primary" value="Comprar" type="button">
+                                </div>  
+                          </div>`
+        contenedorDeProductos.appendChild(div)
+
     }
 }
 
-const producto = { id: 4, nombre: "Serum de Cafeina", precio: 7000 }
-const cafeina = new Producto(producto)
-productos.push(cafeina);
-
-/*Funcion para Sumar los Precios del Carrito
-
-function totalCompra(){
-
-    for (let i = 0; i < carritoCompras.length; i++) {
-
-        total = total + carritoCompras[i].precio 
-    }
-} */
-
-//Inicializando variables y Arrays
-
-let total = 0;
-let carritoCompras = [];
-
-//Ingreso de Datos
-
-alert("Hola Bienvenidx a Miskincareshop, presiona Aceptar para continuar comprando")
-
-let compra = prompt(`Estos son los productos con Stock:
-        1. Acido Ascorbico
-        2. Acido Glicolico
-        3. Polvo de Niacinamida
-        4. Cafeina
-       
-         Ingresa el número de el o los Productos que Deseas Comprar`)
-
-carritoCompras = compra.split(',').map(function (item) {
-    return item.trim();
-});
-
-console.log(carritoCompras)
-
-for (let i = 0; i < carritoCompras.length; i++) {
-    switch (parseInt(carritoCompras[i])) {
-        case 1:
-            total += (productos[0].precio)
-            break;
-        case 2:
-            total += (productos[1].precio)
-            break;
-        case 3:
-            total += (productos[2].precio)
-        case 4:
-            total += (productos[3].precio)
-            break;
-    }
-}
-alert(`El total de tu compra es: ${total}`)
-alert("Gracias por Comprar en MiSkincareShop")
-
-totalCompra();
 
 
+
+
+/*Guardar en el localStorage todos los productos
+const guardar = (clave, valor) => { localStorage.setItem(clave, valor) };
+guardar("lista", JSON.stringify(contenedorDeProductos));*/
